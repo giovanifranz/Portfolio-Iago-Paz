@@ -42,7 +42,8 @@ export function BlocoHome({
       </section>
       <style jsx>{`
         section {
-          margin: -3px auto 0 auto;
+          margin: -3px auto;
+          width: 100vw;
           max-width: 1980px;
           display: flex;
           justify-content: space-between;
@@ -50,8 +51,13 @@ export function BlocoHome({
         }
 
         article {
-          width: 30%;
-          margin: 50px;
+          width: 45%;
+        }
+
+        p {
+          padding-top: 50px;
+          padding-left: 50px;
+          font-size: 14px;
         }
 
         @media (max-width: 768px) {
@@ -59,12 +65,15 @@ export function BlocoHome({
             min-width: 360px;
           }
           article {
-            width: 95px;
-            margin: 25px;
+            width: 165px;
           }
 
           p {
+            padding-top: 20px;
+            padding-left: 0px;
+            width: 95px;
             font-size: 8px;
+            margin: 0 auto;
           }
         }
       `}</style>
