@@ -56,6 +56,7 @@ export function BlocoHome({
 
         @media (max-width: 768px) {
           section {
+            margin: -1px auto;
             min-width: 360px;
           }
           article {
