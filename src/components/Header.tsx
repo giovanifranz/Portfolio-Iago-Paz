@@ -41,6 +41,7 @@ export function Header() {
 
         @media (max-width: 768px) {
           header {
+            min-width: 360px;
             padding: 30px 25px;
           }
         }

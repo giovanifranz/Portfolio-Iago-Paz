@@ -42,9 +42,10 @@ export function BlocoHome({
       </section>
       <style jsx>{`
         section {
-          margin-top: -3px;
-          width: 100%;
+          margin: -3px auto;
+          max-width: 1980px;
           display: flex;
+          justify-content: space-between;
           flex-direction: ${orientation === 'left' ? 'row-reverse' : 'row'};
         }
 
@@ -54,6 +55,9 @@ export function BlocoHome({
         }
 
         @media (max-width: 768px) {
+          section {
+            min-width: 360px;
+          }
           article {
             width: 95px;
             margin: 25px;
