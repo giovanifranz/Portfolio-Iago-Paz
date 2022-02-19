@@ -42,7 +42,8 @@ export function BlocoHome({
       </section>
       <style jsx>{`
         section {
-          margin: -3px auto;
+          margin-top: -3px;
+          margin: auto;
           max-width: 1980px;
           display: flex;
           justify-content: space-between;
@@ -56,7 +57,7 @@ export function BlocoHome({
 
         @media (max-width: 768px) {
           section {
-            margin: -1px auto;
+            margin-top: -1px;
             min-width: 360px;
           }
           article {
