@@ -1,9 +1,10 @@
 import { Fragment } from 'react'
 import type { AppProps } from 'next/app'
-import { Header, Footer } from '../components'
+import { Header } from '../components'
 
 import { GlobalStyle } from '../styles'
 import '@fontsource/inconsolata/400.css'
+import '@fontsource/quicksand/300.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,7 +12,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       <Header />
       <Component {...pageProps} />
-      <Footer />
     </Fragment>
   )
 }

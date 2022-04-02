@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <Container>
       <Link href="mailto:contato@iagopaz.com.br" passHref>
-        <Anchor>contAnchorto@iAnchorgopaz.com.br</Anchor>
+        <Anchor>contato@iagopaz.com.br</Anchor>
       </Link>
 
       <Link

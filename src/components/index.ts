@@ -1,3 +1,4 @@
 export * from './Header'
 export * from './HomeContainer'
 export * from './Footer'
+export * from './PresentationCard'
