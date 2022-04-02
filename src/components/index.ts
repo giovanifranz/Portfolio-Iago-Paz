@@ -1,3 +1,3 @@
 export * from './Header'
-export * from './BlocoHome'
+export * from './HomeContainer'
 export * from './Footer'

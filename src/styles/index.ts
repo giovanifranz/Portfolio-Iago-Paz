@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components'
+
+export const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: 'VCR OSD Mono';
   src: url("/fonts/VCR_OSD_MONO.ttf");
@@ -51,6 +54,7 @@
 :root {
   --white: #fafafa;
   --black: #000;
+  --gray: #a9a9a9;
 }
 
 * {
@@ -76,7 +80,7 @@ body {
   background-color: var(--white);
   color: var(--black);
   margin: 0;
-  font-family: 'Inconsolata', sans-serif;
+  font-family: 'Inconsolata';
 
   h1 {
     font-size: 16px;
@@ -86,13 +90,4 @@ body {
     font-size: 14px;
   }
 }
-
-main {
-  margin-top: 220px;
-}
-
-@media (max-width: 768px) {
-  main {
-    margin-top: 120px;
-  }
-}
+`
