@@ -9,6 +9,9 @@ export const Container = styled.section`
   justify-content: space-between;
   flex-direction: ${({ theme }) =>
     theme.orientation === 'left' ? 'row-reverse' : 'row'};
+  visibility: ${({ theme }) => (theme.isOpen ? 'hidden' : 'visible')};
+  opacity: ${({ theme }) => (theme.isOpen ? 0 : 1)};
+  transition: ${({ theme }) => (theme.isOpen ? 0.3 : 0.6) + 's'};
 
   @media (max-width: 768px) {
     min-width: 360px;

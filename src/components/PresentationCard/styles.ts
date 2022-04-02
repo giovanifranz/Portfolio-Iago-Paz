@@ -5,6 +5,9 @@ export const Container = styled.section`
   height: 715px;
   margin: 0 auto;
   padding-top: 30px;
+  visibility: ${({ theme }) => (theme.isOpen ? 'visible' : 'hidden')};
+  opacity: ${({ theme }) => (theme.isOpen ? 1 : 0)};
+  transition: ${({ theme }) => (theme.isOpen ? 0.6 : 0.3) + 's'};
 
   @media (max-width: 768px) {
     width: 285px;

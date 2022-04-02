@@ -9,6 +9,9 @@ export const Container = styled.footer`
   padding: 30px 100px;
   display: flex;
   align-items: center;
+  visibility: ${({ theme }) => (theme.isOpen ? 'hidden' : 'visible')};
+  opacity: ${({ theme }) => (theme.isOpen ? 0 : 1)};
+  transition: ${({ theme }) => (theme.isOpen ? 0.3 : 0.6) + 's'};
 
   @media (max-width: 768px) {
     margin-top: 10px;
