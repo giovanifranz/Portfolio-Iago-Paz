@@ -5,6 +5,10 @@ export const Container = styled.section`
   height: 715px;
   margin: 0 auto;
   padding-top: 30px;
+
+  @media (max-width: 768px) {
+    width: 285px;
+  }
 `
 
 export const Article = styled.article`
