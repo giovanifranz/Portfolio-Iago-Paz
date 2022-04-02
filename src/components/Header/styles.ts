@@ -44,16 +44,17 @@ export const Burguer = styled.button`
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ theme }) => (theme.open ? 'rotate(45deg)' : 'rotate(0)')};
+      transform: ${({ theme }) =>
+        theme.isOpen ? 'rotate(45deg)' : 'rotate(0)'};
     }
 
     :nth-child(2) {
-      opacity: ${({ theme }) => (theme.open ? '0' : '1')};
+      opacity: ${({ theme }) => (theme.isOpen ? '0' : '1')};
     }
 
     :nth-child(3) {
       transform: ${({ theme }) =>
-        theme.open ? 'rotate(-45deg)' : 'rotate(0)'};
+        theme.isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
 `

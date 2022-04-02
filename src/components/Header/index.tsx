@@ -1,16 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { useWindowsIsDesktop } from '../../hooks/useWindowsIsDesktop'
 import { Container, Burguer } from './styles'
+import { useIsOpen } from '../../hooks/useIsOpen'
 
 function Header() {
-  const [open, setOpen] = useState(false)
+  const { isOpen, setIsOpen } = useIsOpen()
   const isDesktop = useWindowsIsDesktop()
 
   const theme = {
-    open,
+    isOpen,
     isDesktop
   }
 
@@ -28,7 +28,7 @@ function Header() {
       </Link>
 
       <ThemeProvider theme={theme}>
-        <Burguer onClick={() => setOpen(!open)}>
+        <Burguer onClick={() => setIsOpen(!isOpen)}>
           <div />
           <div />
           <div />
