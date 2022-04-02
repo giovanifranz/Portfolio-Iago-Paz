@@ -1,18 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ThemeProvider } from 'styled-components'
+import { useRouter } from 'next/router'
+import dynamic from 'next/dynamic'
 import { useWindowsIsDesktop } from '../../hooks/useWindowsIsDesktop'
-import { Container, Burguer } from './styles'
-import { useIsOpen } from '../../hooks/useIsOpen'
+import { Container } from './styles'
+import type { ButtonProps } from './Button'
+
+const Button = dynamic<ButtonProps>(() =>
+  import('./Button').then((module) => module.Button)
+)
 
 function Header() {
-  const { isOpen, setIsOpen } = useIsOpen()
   const isDesktop = useWindowsIsDesktop()
-
-  const theme = {
-    isOpen,
-    isDesktop
-  }
+  const { pathname } = useRouter()
 
   return (
     <Container>
@@ -26,14 +26,7 @@ function Header() {
           />
         </a>
       </Link>
-
-      <ThemeProvider theme={theme}>
-        <Burguer onClick={() => setIsOpen(!isOpen)}>
-          <div />
-          <div />
-          <div />
-        </Burguer>
-      </ThemeProvider>
+      {pathname === '/home' && <Button isDesktop={isDesktop} />}
     </Container>
   )
 }
