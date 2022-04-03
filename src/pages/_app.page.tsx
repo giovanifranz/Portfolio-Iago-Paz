@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 9500)
+    }, 10500)
   }, [])
 
   return (
