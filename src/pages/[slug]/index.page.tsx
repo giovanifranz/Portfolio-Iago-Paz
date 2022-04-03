@@ -74,7 +74,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       params: { slug: key }
     })),
 
-    fallback: true
+    fallback: false
   }
 }
 
