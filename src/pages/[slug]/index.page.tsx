@@ -1,24 +1,16 @@
 import { Fragment } from 'react'
 import Image from 'next/image'
 import { Container } from '../../styles'
-import { Footer } from '../../components'
 import { Heading } from './styles'
+import { Footer } from '../../components'
 import { useWindowsSize } from '../../hooks/useWindowsSize'
-import { portifolioMap, PortifolioProps } from './portifolioMap'
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
-
-type Props =
-  | 'bryan-vitorio'
-  | 'yamakaze'
-  | 'bruno-barsante'
-  | 'monique-batista'
-  | 'whatanime'
-  | 'carol-figueiredo'
-  | 'highlander'
-
-interface PortifolioPageProps {
-  portifolio: PortifolioProps
-}
+import { portifolioMap } from './portifolioMap'
+import type { PortifolioProps, PortifolioPageProps, PageProps } from './types'
+import type {
+  GetStaticPaths,
+  GetStaticProps,
+  GetStaticPropsContext
+} from 'next'
 
 export default function Portifolio({ portifolio }: PortifolioPageProps) {
   const { isDesktop, width } = useWindowsSize()
@@ -37,7 +29,6 @@ export default function Portifolio({ portifolio }: PortifolioPageProps) {
           {portifolio.description}
         </Heading>
         {portifolio.images.map(({ alt, height, isMobile }, index) => {
-          const key = index + 1
           const heightImage = () => {
             if (!isDesktop && isMobile) {
               return height ? height : 220
@@ -54,7 +45,7 @@ export default function Portifolio({ portifolio }: PortifolioPageProps) {
             return (
               <Image
                 key={index}
-                src={`/portifolio${portifolio.href}/${key}.png`}
+                src={`/portifolio${portifolio.href}/${index + 1}.png`}
                 alt={alt}
                 width={width}
                 height={heightImage()}
@@ -73,7 +64,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: Object.keys(portifolioMap).map((key) => ({
       params: { slug: key }
     })),
-
     fallback: false
   }
 }
@@ -82,7 +72,9 @@ export const getStaticProps: GetStaticProps = async ({
   params
 }: GetStaticPropsContext) => {
   if (typeof params?.slug === 'string') {
-    const portifolio = portifolioMap[params?.slug as Props] as PortifolioProps
+    const portifolio = portifolioMap[
+      params?.slug as PageProps
+    ] as PortifolioProps
     return {
       props: {
         portifolio

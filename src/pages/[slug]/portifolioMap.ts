@@ -1,13 +1,4 @@
-export interface PortifolioProps {
-  href: string
-  title: string
-  description: string
-  images: {
-    isMobile?: boolean
-    alt: string
-    height?: number
-  }[]
-}
+import type { PortifolioProps } from './types'
 
 export const portifolioMap = {
   'bryan-vitorio': {
