@@ -1,4 +1,5 @@
 export interface PortifolioProps {
+  href: string
   title: string
   description: string
   images: {
@@ -9,7 +10,8 @@ export interface PortifolioProps {
 }
 
 export const portifolioMap = {
-  '/bryan-vitorio': {
+  'bryan-vitorio': {
+    href: '/bryan-vitorio',
     title: 'Bryan Vitório',
     description: 'Identidade Visual 2022',
     images: [
@@ -20,7 +22,8 @@ export const portifolioMap = {
       { alt: 'Cartão verso Bryan Vitório' }
     ]
   } as PortifolioProps,
-  '/yamakaze': {
+  yamakaze: {
+    href: '/yamakaze',
     title: 'Yamakaze Lámen Tradicional',
     description: 'Identidade Visual 2022',
     images: [
@@ -30,7 +33,8 @@ export const portifolioMap = {
       { alt: 'Comanda Yamakaze Lámen Tradicional' }
     ]
   } as PortifolioProps,
-  '/bruno-barsante': {
+  'bruno-barsante': {
+    href: '/bruno-barsante',
     title: 'Bruno Barsante Cultura Marcial',
     description: 'Logo 2021',
     images: [
@@ -39,7 +43,8 @@ export const portifolioMap = {
       { alt: 'Camiseta Bruno Barsante' }
     ]
   } as PortifolioProps,
-  '/monique-batista': {
+  'monique-batista': {
+    href: '/monique-batista',
     title: 'Monique Batista Psicóloga',
     description: 'Layout 2021',
     images: [
@@ -57,7 +62,8 @@ export const portifolioMap = {
       }
     ]
   } as PortifolioProps,
-  '/whatanime': {
+  whatanime: {
+    href: '/whatanime',
     title: 'Whatanime',
     description: 'Layout Logo 2021',
     images: [
@@ -75,7 +81,8 @@ export const portifolioMap = {
       }
     ]
   } as PortifolioProps,
-  '/carol-figueiredo': {
+  'carol-figueiredo': {
+    href: '/carol-figueiredo',
     title: 'Carol Figueiredo Fotografia Urbana',
     description: 'Layout Identidade Visual 2021',
     images: [
@@ -86,7 +93,8 @@ export const portifolioMap = {
       { alt: 'Layout Carol Figueiredo Formulário Contato' }
     ]
   } as PortifolioProps,
-  '/highlander': {
+  highlander: {
+    href: '/highlander',
     title: 'Highlander Tech',
     description: 'Layout 2021',
     images: [
