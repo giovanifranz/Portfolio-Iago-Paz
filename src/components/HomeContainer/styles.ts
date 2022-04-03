@@ -14,6 +14,7 @@ export const Container = styled.section`
   transition: ${({ theme }) => (theme.isOpen ? 0.3 : 0.6) + 's'};
 
   @media (max-width: 768px) {
+    margin-bottom: -3.3px;
     min-width: 360px;
   }
 `
