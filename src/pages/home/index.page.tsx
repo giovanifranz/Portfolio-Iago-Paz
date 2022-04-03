@@ -1,5 +1,5 @@
 import { HomeContainer, HomeContainerProps, Footer } from '../../components'
-import { Container } from './styles'
+import { Container } from '../../styles'
 import { homeProps } from './homeProps'
 import { useIsOpen } from '../../hooks/useIsOpen'
 import { Fragment, useState, useEffect } from 'react'
@@ -12,7 +12,7 @@ const PresentationCard = dynamic<EmptyObject>(() =>
   )
 )
 
-const Home = () => {
+export default function Home() {
   const { isOpen } = useIsOpen()
   const [isOpenTheme, setIsOpenTheme] = useState(isOpen)
 
@@ -43,5 +43,3 @@ const Home = () => {
     </ThemeProvider>
   )
 }
-
-export default Home

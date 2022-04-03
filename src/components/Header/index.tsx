@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
-import { useWindowsIsDesktop } from '../../hooks/useWindowsIsDesktop'
+import { useWindowsSize } from '../../hooks/useWindowsSize'
 import { Container } from './styles'
 import type { ButtonProps } from './Button'
 
@@ -11,7 +11,7 @@ const Button = dynamic<ButtonProps>(() =>
 )
 
 function Header() {
-  const isDesktop = useWindowsIsDesktop()
+  const { isDesktop } = useWindowsSize()
   const { pathname } = useRouter()
 
   return (

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ThemeProvider } from 'styled-components'
-import { useWindowsIsDesktop } from '../../hooks/useWindowsIsDesktop'
+import { useWindowsSize } from '../../hooks/useWindowsSize'
 import { Container, Article, Text } from './styles'
 
 interface Props {
@@ -19,7 +19,7 @@ function HomeContainer({
   href,
   orientation
 }: Props) {
-  const isDesktop = useWindowsIsDesktop()
+  const { isDesktop } = useWindowsSize()
 
   const theme = {
     orientation

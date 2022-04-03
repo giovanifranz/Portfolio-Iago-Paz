@@ -35,24 +35,17 @@ export const homeProps = [
     orientation: 'left'
   },
   {
-    title: 'Oriental Wing Chun',
-    description: 'Layout Identidade Visual 2021',
-    image: '/Home/oriental.png',
-    href: '/oriental-wing-chun',
-    orientation: 'right'
-  },
-  {
     title: 'Carol Figueiredo Fotografia Urbana',
     description: 'Layout Identidade Visual 2021',
     image: '/Home/carol.png',
     href: '/carol-figueiredo',
-    orientation: 'left'
+    orientation: 'right'
   },
   {
     title: 'Highlander Tech',
     description: 'Layout 2021',
     image: '/Home/highlander.png',
     href: '/highlander',
-    orientation: 'right'
+    orientation: 'left'
   }
 ]

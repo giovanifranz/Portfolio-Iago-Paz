@@ -1,55 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-@font-face {
-  font-family: 'VCR OSD Mono';
-  src: url("/fonts/VCR_OSD_MONO.ttf");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Louis George Café';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Louis George Café'), url('/fonts/Louis/Louis_George_Cafe.ttf');
-}
-
-@font-face {
-  font-family: 'Louis George Café';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Louis George Café'), url('/fonts/Louis/Louis_George_Cafe_Italic.ttf');
-}
-
-@font-face {
-  font-family: 'Louis George Café';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Louis George Café'), url('/fonts/Louis/Louis_George_Cafe_Bold.ttf');
-}
-
-@font-face {
-  font-family: 'Louis George Café';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Louis George Café'), url('/fonts/Louis/Louis_George_Cafe_Bold_Italic.ttf');
-}
-
-@font-face {
-  font-family: 'Louis George Café Light';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Louis George Café'), url('/fonts/Louis/Louis_George_Cafe_Light.ttf');
-}
-
-@font-face {
-  font-family: 'Louis George Café Light';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Louis George Café'), url('/fonts/Louis/Louis_George_Cafe_Light_Italic.ttf');
-}
 
 :root {
   --white: #fafafa;
@@ -90,4 +42,14 @@ body {
     font-size: 14px;
   }
 }
+`
+
+export const Container = styled.main`
+  margin-top: 220px;
+  margin-bottom: 25px;
+
+  @media (max-width: 768px) {
+    margin-top: 150px;
+    margin-bottom: 12px;
+  }
 `
