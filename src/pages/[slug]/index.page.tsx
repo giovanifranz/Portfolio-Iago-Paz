@@ -26,34 +26,32 @@ export default function Portifolio() {
           </Heading>
           {portifolio.images.map(({ alt, height, isMobile }, index) => {
             const key = index + 1
+            const heightImage = () => {
+              if (!isDesktop && isMobile) {
+                return height ? height : 220
+              } else if (isDesktop && !isMobile) {
+                return height ? height : 850
+              } else if (isMobile === undefined) {
+                return isDesktop ? 850 : 220
+              }
 
-            if (!isDesktop && isMobile) {
-              return (
-                <Image
-                  key={index}
-                  src={`/portifolio${asPath}/${key}-mobile.png`}
-                  alt={alt}
-                  width={width}
-                  height={height as number}
-                />
-              )
+              return 0
             }
 
-            if (isDesktop && !isMobile) {
+            if (heightImage() > 0) {
               return (
                 <Image
                   key={index}
                   src={`/portifolio${asPath}/${key}.png`}
                   alt={alt}
                   width={width}
-                  height={height ? height : 850}
+                  height={heightImage()}
                 />
               )
-            }
+            } else return null
           })}
         </Container>
       )}
-
       <Footer />
     </Fragment>
   )
