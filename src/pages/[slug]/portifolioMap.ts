@@ -48,12 +48,12 @@ export const portifolioMap = {
       {
         alt: 'Layout Monique Batista Psicóloga',
         height: 3035,
-        isMobile: true
+        isMobile: false
       },
       {
         alt: 'Layout Monique Batista Psicóloga',
         height: 758,
-        isMobile: false
+        isMobile: true
       }
     ]
   } as PortifolioProps,
