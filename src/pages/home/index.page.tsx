@@ -1,7 +1,7 @@
 import { HomeContainer, HomeContainerProps, Footer } from '../../components'
 import { Container } from '../../styles'
 import { homeProps } from './homeProps'
-import { useIsOpen } from '../../hooks/useIsOpen'
+import { useIsOpen } from '../../hooks'
 import { Fragment, useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import { ThemeProvider } from 'styled-components'

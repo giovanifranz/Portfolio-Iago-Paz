@@ -45,10 +45,13 @@ body {
 `
 
 export const Container = styled.main`
+  max-width: 1920px;
+  margin: 0 auto;
   margin-top: 220px;
   margin-bottom: 25px;
 
   @media (max-width: 768px) {
+    max-width: 768px;
     margin-top: 150px;
     margin-bottom: 12px;
   }

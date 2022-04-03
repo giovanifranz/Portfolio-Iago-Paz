@@ -16,7 +16,7 @@ function Header() {
 
   return (
     <Container>
-      <Link href="/">
+      <Link href="/home">
         <a>
           <Image
             src="/Logo.png"
