@@ -47,12 +47,13 @@ export const portifolioMap = {
       { alt: 'Fonte e paleta de cores Roboto' },
       {
         alt: 'Layout Monique Batista Psicóloga',
-        height: 3035
+        height: 3035,
+        isMobile: true
       },
       {
         alt: 'Layout Monique Batista Psicóloga',
         height: 758,
-        isMobile: true
+        isMobile: false
       }
     ]
   } as PortifolioProps,
