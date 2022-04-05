@@ -33,6 +33,7 @@ body {
   color: var(--black);
   margin: 0;
   font-family: 'Inconsolata';
+  overflow-x: hidden;
 
   h1 {
     font-size: 16px;
