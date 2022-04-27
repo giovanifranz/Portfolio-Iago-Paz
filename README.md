@@ -14,7 +14,7 @@ npm run dev
 
 ## Links
 
-Link: https://iago-portfolio.vercel.app
+Link: https://www.iagopaz.com.br/
 
 ![Logo Highlander Tech](https://raw.githubusercontent.com/giovanifranz/Iago-Portfolio/main/public/Logo.png)
 
