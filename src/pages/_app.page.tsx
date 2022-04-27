@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment } from 'react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
@@ -10,14 +10,15 @@ import '@fontsource/inconsolata/400.css'
 import '@fontsource/quicksand/300.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [isLoading, setIsLoading] = useState(true)
+  //const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() => {
+  /*useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
     }, 10500)
-  }, [])
+  }, [])*/
 
+  const isLoading = false
   return (
     <IsOpenProvider>
       <Head>

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   margin: 0 auto;
-  height: 100hw;
+  height: 100%;
   width: 100vw;
   max-width: 1980px;
   display: flex;
@@ -11,9 +11,9 @@ export const Container = styled.section`
   visibility: ${({ theme }) => (theme.isOpen ? 'hidden' : 'visible')};
   opacity: ${({ theme }) => (theme.isOpen ? 0 : 1)};
   transition: ${({ theme }) => (theme.isOpen ? 0.3 : 0.6) + 's'};
+  margin-bottom: -3.3px;
 
   @media (max-width: 768px) {
-    margin-bottom: -3.3px;
     min-width: 360px;
   }
 `
