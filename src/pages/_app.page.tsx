@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <IsOpenProvider>
       <Head>
-        <title>HighlanderTech</title>
+        <title>Iago Paz UX & Design</title>
         <link rel="Logo" href="/Logo.png" />
         <link rel="Marca" href="/Marca.png" />
         <link rel="manifest" href="/manifest.json" />
