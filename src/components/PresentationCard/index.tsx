@@ -1,5 +1,6 @@
-import { Container, Article, Text, Contato } from './styles'
 import Image from 'next/image'
+
+import { Article, Container, Contato, Text } from './styles'
 
 function PresentationCard() {
   const today = new Date()
@@ -10,15 +11,8 @@ function PresentationCard() {
   return (
     <Container>
       <Article>
-        <Text>
-          Um designer de {years} anos com forte influência do design oriental.
-        </Text>
-        <Image
-          src="/Emblema.png"
-          alt="Emblema Iago Paz"
-          width={60}
-          height={145}
-        />
+        <Text>Um designer de {years} anos com forte influência do design oriental.</Text>
+        <Image src="/Emblema.png" alt="Emblema Iago Paz" width={60} height={145} />
       </Article>
       <Image src="/Marca.png" alt="Marca Iago Paz" width={330} height={105} />
       <Contato>

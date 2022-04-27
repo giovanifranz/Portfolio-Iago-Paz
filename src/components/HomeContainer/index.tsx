@@ -1,8 +1,7 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { ThemeProvider } from 'styled-components'
-import { useWindowsSize } from '../../hooks/useWindowsSize'
-import { Container, Article, Text } from './styles'
+
+import { Article, Banner, Container, Text } from './styles'
 
 interface Props {
   title: string
@@ -12,17 +11,9 @@ interface Props {
   orientation: 'left' | 'right'
 }
 
-function HomeContainer({
-  title,
-  description,
-  image,
-  href,
-  orientation
-}: Props) {
-  const { isDesktop } = useWindowsSize()
-
+function HomeContainer({ title, description, image, href, orientation }: Props) {
   const theme = {
-    orientation
+    orientation,
   }
 
   return (
@@ -34,16 +25,13 @@ function HomeContainer({
             <br /> {description}
           </Text>
         </Article>
-        <Link href={href}>
-          <a>
-            <Image
-              src={image}
-              alt={title}
-              height={isDesktop ? 700 : 210}
-              width={isDesktop ? 1120 : 250}
-            />
-          </a>
-        </Link>
+        <Banner>
+          <Link href={href}>
+            <a>
+              <img src={image} alt={title} height="100%" width="100%" />
+            </a>
+          </Link>
+        </Banner>
       </Container>
     </ThemeProvider>
   )

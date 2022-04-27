@@ -10,8 +10,8 @@ export const portifolioMap = {
       { alt: 'Fontes e paleta de cores' },
       { alt: 'Cartão Bryan Vitório' },
       { alt: 'Canetas Bryan Vitório' },
-      { alt: 'Cartão verso Bryan Vitório' }
-    ]
+      { alt: 'Cartão verso Bryan Vitório' },
+    ],
   } as PortifolioProps,
   yamakaze: {
     href: '/yamakaze',
@@ -21,8 +21,8 @@ export const portifolioMap = {
       { alt: 'Banner Yamakaze Lámen Tradicional' },
       { alt: 'Fontes e paleta de cores' },
       { alt: 'Produto Yamakaze Lámen Tradicional' },
-      { alt: 'Comanda Yamakaze Lámen Tradicional' }
-    ]
+      { alt: 'Comanda Yamakaze Lámen Tradicional' },
+    ],
   } as PortifolioProps,
   'bruno-barsante': {
     href: '/bruno-barsante',
@@ -31,8 +31,8 @@ export const portifolioMap = {
     images: [
       { alt: 'Logo Bruno Barsante' },
       { alt: 'Abrigo Bruno Barsante' },
-      { alt: 'Camiseta Bruno Barsante' }
-    ]
+      { alt: 'Camiseta Bruno Barsante' },
+    ],
   } as PortifolioProps,
   'monique-batista': {
     href: '/monique-batista',
@@ -44,14 +44,14 @@ export const portifolioMap = {
       {
         alt: 'Layout Monique Batista Psicóloga',
         height: 3035,
-        isMobile: false
+        isMobile: false,
       },
       {
         alt: 'Layout Monique Batista Psicóloga',
         height: 758,
-        isMobile: true
-      }
-    ]
+        isMobile: true,
+      },
+    ],
   } as PortifolioProps,
   whatanime: {
     href: '/whatanime',
@@ -63,14 +63,14 @@ export const portifolioMap = {
       {
         alt: 'Layout Whatanime',
         height: 757,
-        isMobile: true
+        isMobile: true,
       },
       {
         alt: 'Layout Whatanime',
         height: 1170,
-        isMobile: false
-      }
-    ]
+        isMobile: false,
+      },
+    ],
   } as PortifolioProps,
   'carol-figueiredo': {
     href: '/carol-figueiredo',
@@ -81,8 +81,8 @@ export const portifolioMap = {
       { alt: 'Layout Home' },
       { alt: 'Layout Carol Figueiredo' },
       { alt: 'Layout Carol Figueiredo Portifólio' },
-      { alt: 'Layout Carol Figueiredo Formulário Contato' }
-    ]
+      { alt: 'Layout Carol Figueiredo Formulário Contato' },
+    ],
   } as PortifolioProps,
   highlander: {
     href: '/highlander',
@@ -93,23 +93,23 @@ export const portifolioMap = {
       {
         alt: 'Layout Home',
         height: 2050,
-        isMobile: false
+        isMobile: false,
       },
       {
         alt: 'Layout Sobre',
         height: 1020,
-        isMobile: false
+        isMobile: false,
       },
       {
         alt: 'Layout Formulário Contato',
         height: 770,
-        isMobile: false
+        isMobile: false,
       },
       {
         alt: 'Layout HighlanderTech Mobile',
         height: 2440,
-        isMobile: true
-      }
-    ]
-  } as PortifolioProps
+        isMobile: true,
+      },
+    ],
+  } as PortifolioProps,
 }

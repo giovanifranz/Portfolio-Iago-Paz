@@ -1,5 +1,5 @@
+import type { Dispatch, ReactNode, SetStateAction } from 'react'
 import { createContext, useContext, useState } from 'react'
-import type { ReactNode, Dispatch, SetStateAction } from 'react'
 
 interface Props {
   isOpen: boolean
@@ -15,11 +15,7 @@ const IsOpenContext = createContext({ isOpen: true } as Props)
 function IsOpenProvider({ children }: IsOpenProviderProps) {
   const [isOpen, setIsOpen] = useState(false)
 
-  return (
-    <IsOpenContext.Provider value={{ isOpen, setIsOpen }}>
-      {children}
-    </IsOpenContext.Provider>
-  )
+  return <IsOpenContext.Provider value={{ isOpen, setIsOpen }}>{children}</IsOpenContext.Provider>
 }
 
 const useIsOpen = () => useContext(IsOpenContext)

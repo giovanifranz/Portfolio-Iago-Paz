@@ -1,6 +1,8 @@
-import { Burguer } from './styles'
-import { useIsOpen } from '../../hooks/useIsOpen'
 import { ThemeProvider } from 'styled-components'
+
+import { useIsOpen } from '../../hooks/useIsOpen'
+
+import { Burguer } from './styles'
 
 interface Props {
   isDesktop: boolean
@@ -11,7 +13,7 @@ function Button({ isDesktop }: Props) {
 
   const theme = {
     isOpen,
-    isDesktop
+    isDesktop,
   }
 
   return (

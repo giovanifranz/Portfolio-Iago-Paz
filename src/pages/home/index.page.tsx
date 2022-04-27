@@ -1,15 +1,15 @@
-import { HomeContainer, HomeContainerProps, Footer } from '../../components'
-import { Container } from '../../styles'
-import { homeProps } from './homeProps'
-import { useIsOpen } from '../../hooks'
-import { Fragment, useState, useEffect } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { ThemeProvider } from 'styled-components'
 
+import { Footer, HomeContainer, HomeContainerProps } from '../../components'
+import { useIsOpen } from '../../hooks'
+import { Container } from '../../styles'
+
+import { homeProps } from './homeProps'
+
 const PresentationCard = dynamic<EmptyObject>(() =>
-  import('../../components/PresentationCard').then(
-    (module) => module.PresentationCard
-  )
+  import('../../components/PresentationCard').then((module) => module.PresentationCard),
 )
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
   }, [isOpen])
 
   const theme = {
-    isOpen
+    isOpen,
   }
 
   return (

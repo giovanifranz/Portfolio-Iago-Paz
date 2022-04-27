@@ -1,14 +1,13 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-  margin: -3px auto;
+  margin: 0 auto;
   height: 100hw;
   width: 100vw;
   max-width: 1980px;
   display: flex;
   justify-content: space-between;
-  flex-direction: ${({ theme }) =>
-    theme.orientation === 'left' ? 'row-reverse' : 'row'};
+  flex-direction: ${({ theme }) => (theme.orientation === 'left' ? 'row-reverse' : 'row')};
   visibility: ${({ theme }) => (theme.isOpen ? 'hidden' : 'visible')};
   opacity: ${({ theme }) => (theme.isOpen ? 0 : 1)};
   transition: ${({ theme }) => (theme.isOpen ? 0.3 : 0.6) + 's'};
@@ -24,6 +23,15 @@ export const Article = styled.article`
 
   @media (max-width: 768px) {
     width: 165px;
+  }
+`
+
+export const Banner = styled.div`
+  height: 100%;
+  width: 1120px;
+
+  @media (max-width: 768px) {
+    width: 70%;
   }
 `
 
