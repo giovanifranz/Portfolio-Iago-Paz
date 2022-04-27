@@ -45,8 +45,7 @@ export const Burguer = styled.button`
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ theme }) =>
-        theme.isOpen ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ theme }) => (theme.isOpen ? 'rotate(45deg)' : 'rotate(0)')};
     }
 
     :nth-child(2) {
@@ -54,8 +53,7 @@ export const Burguer = styled.button`
     }
 
     :nth-child(3) {
-      transform: ${({ theme }) =>
-        theme.isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ theme }) => (theme.isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 `
