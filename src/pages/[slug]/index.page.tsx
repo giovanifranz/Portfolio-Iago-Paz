@@ -25,27 +25,23 @@ export default function Portifolio({ portifolio }: PortifolioPageProps) {
           <br />
           {portifolio.description}
         </Heading>
-        {portifolio.images.map(({ alt, height, isMobile }, index) => {
+        {portifolio.images.map(({ alt, isMobile }, index) => {
           const heightImage = () => {
-            if (!isDesktop && isMobile) {
-              return height ? height : 220
-            } else if (isDesktop && !isMobile) {
-              return height ? height : 850
-            } else if (isMobile === undefined) {
-              return isDesktop ? 850 : 220
-            }
+            if (!isDesktop && isMobile) return true
+            else if (isDesktop && !isMobile) return true
+            else if (isMobile === undefined) return true
 
-            return 0
+            return false
           }
 
-          if (heightImage() > 0) {
+          if (heightImage()) {
             return (
               <img
                 key={index}
                 src={`/portifolio${portifolio.href}/${index + 1}.png`}
                 alt={alt}
                 width="100%"
-                height="100¨%"
+                height="100%"
               />
             )
           } else return null

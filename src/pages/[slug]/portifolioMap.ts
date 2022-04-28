@@ -41,16 +41,8 @@ export const portifolioMap = {
     images: [
       { alt: 'Fonte e paleta de cores Cormorant Garamond ' },
       { alt: 'Fonte e paleta de cores Roboto' },
-      {
-        alt: 'Layout Monique Batista Psicóloga',
-        height: 3035,
-        isMobile: false,
-      },
-      {
-        alt: 'Layout Monique Batista Psicóloga',
-        height: 758,
-        isMobile: true,
-      },
+      { alt: 'Layout Monique Batista Psicóloga', isMobile: false },
+      { alt: 'Layout Monique Batista Psicóloga', isMobile: true },
     ],
   } as PortifolioProps,
   whatanime: {
@@ -60,16 +52,8 @@ export const portifolioMap = {
     images: [
       { alt: 'Fonte e paleta de cores Nova Mono ' },
       { alt: 'Fonte Roboto' },
-      {
-        alt: 'Layout Whatanime',
-        height: 757,
-        isMobile: true,
-      },
-      {
-        alt: 'Layout Whatanime',
-        height: 1170,
-        isMobile: false,
-      },
+      { alt: 'Layout Whatanime', isMobile: true },
+      { alt: 'Layout Whatanime', isMobile: false },
     ],
   } as PortifolioProps,
   'carol-figueiredo': {
@@ -90,26 +74,10 @@ export const portifolioMap = {
     description: 'Layout 2021',
     images: [
       { alt: 'Fonte e paleta de cores Inter' },
-      {
-        alt: 'Layout Home',
-        height: 2050,
-        isMobile: false,
-      },
-      {
-        alt: 'Layout Sobre',
-        height: 1020,
-        isMobile: false,
-      },
-      {
-        alt: 'Layout Formulário Contato',
-        height: 770,
-        isMobile: false,
-      },
-      {
-        alt: 'Layout HighlanderTech Mobile',
-        height: 2440,
-        isMobile: true,
-      },
+      { alt: 'Layout Home', isMobile: false },
+      { alt: 'Layout Sobre', isMobile: false },
+      { alt: 'Layout Formulário Contato', isMobile: false },
+      { alt: 'Layout HighlanderTech Mobile', isMobile: true },
     ],
   } as PortifolioProps,
 }
