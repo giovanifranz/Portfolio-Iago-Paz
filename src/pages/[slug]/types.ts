@@ -12,9 +12,7 @@ export interface PortifolioProps {
   title: string
   description: string
   images: {
-    isMobile?: boolean
     alt: string
-    height?: number
   }[]
 }
 
