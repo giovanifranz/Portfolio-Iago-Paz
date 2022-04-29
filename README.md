@@ -16,7 +16,7 @@ npm run dev
 
 Link: https://www.iagopaz.com.br/
 
-![Logo Highlander Tech](https://raw.githubusercontent.com/giovanifranz/Iago-Portfolio/main/public/Logo.png)
+![Logo Iago Paz](https://raw.githubusercontent.com/giovanifranz/Iago-Portfolio/main/public/Logo.png)
 
 </br>
 
