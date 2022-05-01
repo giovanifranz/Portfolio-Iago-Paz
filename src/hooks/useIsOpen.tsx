@@ -1,5 +1,4 @@
-import type { Dispatch, ReactNode, SetStateAction } from 'react'
-import { createContext, useContext, useState } from 'react'
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useMemo, useState } from 'react'
 
 interface Props {
   isOpen: boolean
@@ -15,10 +14,11 @@ const IsOpenContext = createContext({ isOpen: true } as Props)
 function IsOpenProvider({ children }: IsOpenProviderProps) {
   const [isOpen, setIsOpen] = useState(false)
 
-  return <IsOpenContext.Provider value={{ isOpen, setIsOpen }}>{children}</IsOpenContext.Provider>
+  const value = useMemo(() => ({ isOpen, setIsOpen }), [isOpen, setIsOpen])
+  return <IsOpenContext.Provider value={value}>{children}</IsOpenContext.Provider>
 }
 
 const useIsOpen = () => useContext(IsOpenContext)
 
-export { IsOpenProvider, IsOpenContext, useIsOpen }
+export { IsOpenContext, IsOpenProvider, useIsOpen }
 export type { Props as IsOpenContextProps }

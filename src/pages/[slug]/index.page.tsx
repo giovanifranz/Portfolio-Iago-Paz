@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import type { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
 
 import { Footer } from '../../components'
@@ -17,7 +16,7 @@ export default function Portifolio({ portifolio }: PortifolioPageProps) {
   }
 
   return (
-    <Fragment>
+    <>
       <Container>
         <Heading>
           {portifolio.title}
@@ -28,8 +27,8 @@ export default function Portifolio({ portifolio }: PortifolioPageProps) {
         {portifolio.images.map(({ alt, isMobile }, index) => {
           const heightImage = () => {
             if (!isDesktop && isMobile) return true
-            else if (isDesktop && !isMobile) return true
-            else if (isMobile === undefined) return true
+            if (isDesktop && !isMobile) return true
+            if (isMobile === undefined) return true
 
             return false
           }
@@ -44,22 +43,21 @@ export default function Portifolio({ portifolio }: PortifolioPageProps) {
                 height="100%"
               />
             )
-          } else return null
+          }
+          return null
         })}
       </Container>
       <Footer />
-    </Fragment>
+    </>
   )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: Object.keys(portifolioMap).map((key) => ({
-      params: { slug: key },
-    })),
-    fallback: false,
-  }
-}
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: Object.keys(portifolioMap).map((key) => ({
+    params: { slug: key },
+  })),
+  fallback: false,
+})
 
 export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsContext) => {
   if (typeof params?.slug === 'string') {

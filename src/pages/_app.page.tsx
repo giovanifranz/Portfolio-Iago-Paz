@@ -10,31 +10,31 @@ import '@fontsource/inconsolata/400.css'
 import '@fontsource/quicksand/300.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  //const [isLoading, setIsLoading] = useState(true)
+  // const [isLoading, setIsLoading] = useState(true)
 
-  /*useEffect(() => {
+  /* useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
     }, 10500)
-  }, [])*/
+  }, []) */
 
   const isLoading = false
   return (
     <IsOpenProvider>
       <Head>
         <title>Iago Paz UX & Design</title>
-        <link rel="Logo" href="/Logo.png" />
-        <link rel="Marca" href="/Marca.png" />
+        <link href="/Logo.png" />
+        <link href="/Marca.png" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
       <GlobalStyle />
       {isLoading ? (
         <Loading />
       ) : (
-        <Fragment>
+        <>
           <Header />
           <Component {...pageProps} />
-        </Fragment>
+        </>
       )}
     </IsOpenProvider>
   )
