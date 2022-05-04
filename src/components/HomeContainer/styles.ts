@@ -11,7 +11,6 @@ export const Container = styled.section`
   visibility: ${({ theme }) => (theme.isOpen ? 'hidden' : 'visible')};
   opacity: ${({ theme }) => (theme.isOpen ? 0 : 1)};
   transition: ${({ theme }) => (theme.isOpen ? 0.3 : 0.6) + 's'};
-  margin-bottom: -3.3px;
 
   @media (max-width: 768px) {
     min-width: 360px;
@@ -46,5 +45,29 @@ export const Text = styled.p`
     width: 95px;
     font-size: 8px;
     margin: 0 auto;
+  }
+`
+
+export const Anchor = styled.div`
+  position: relative;
+  min-width: 252px;
+  min-height: 200px;
+
+  width: 1120px;
+  height: 700px;
+
+  @media (max-width: 1280px) {
+    width: 896px;
+    height: 560px;
+  }
+
+  @media (max-width: 768px) {
+    width: 537px;
+    height: 336px;
+  }
+
+  @media (max-width: 480px) {
+    width: auto;
+    height: auto;
   }
 `

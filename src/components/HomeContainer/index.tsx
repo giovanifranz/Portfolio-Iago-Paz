@@ -1,7 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ThemeProvider } from 'styled-components'
 
-import { Article, Banner, Container, Text } from './styles'
+import { Anchor, Article, Banner, Container, Text } from './styles'
 
 interface Props {
   title: string
@@ -26,10 +27,10 @@ function HomeContainer({ title, description, image, href, orientation }: Props) 
           </Text>
         </Article>
         <Banner>
-          <Link href={href}>
-            <a>
-              <img src={image} alt={title} height="100%" width="100%" />
-            </a>
+          <Link href={href} passHref>
+            <Anchor>
+              <Image src={image} alt={title} layout="fill" />
+            </Anchor>
           </Link>
         </Banner>
       </Container>
