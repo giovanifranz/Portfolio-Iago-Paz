@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Suspense } from 'react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
@@ -10,15 +10,6 @@ import '@fontsource/inconsolata/400.css'
 import '@fontsource/quicksand/300.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // const [isLoading, setIsLoading] = useState(true)
-
-  /* useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 10500)
-  }, []) */
-
-  const isLoading = false
   return (
     <IsOpenProvider>
       <Head>
@@ -28,14 +19,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
       </Head>
       <GlobalStyle />
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <>
-          <Header />
-          <Component {...pageProps} />
-        </>
-      )}
+      <Suspense fallback={<Loading />}>
+        <Header />
+        <Component {...pageProps} />
+      </Suspense>
     </IsOpenProvider>
   )
 }

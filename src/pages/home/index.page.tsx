@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useCallback, useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { ThemeProvider } from 'styled-components'
 
@@ -16,10 +16,14 @@ export default function Home() {
   const { isOpen } = useIsOpen()
   const [isOpenTheme, setIsOpenTheme] = useState(isOpen)
 
-  useEffect(() => {
+  const handleOpenTheme = useCallback(() => {
     setTimeout(() => {
       setIsOpenTheme(isOpen)
     }, 300)
+  }, [isOpen])
+
+  useEffect(() => {
+    handleOpenTheme()
   }, [isOpen])
 
   const theme = {
