@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import type { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
 
 import { Footer } from '../../components'
@@ -8,7 +9,7 @@ import { portifolioMap } from './portifolioMap'
 import { Heading } from './styles'
 import type { PageProps, PortifolioPageProps, PortifolioProps } from './types'
 
-export default function Portifolio({ portifolio }: PortifolioPageProps) {
+function Page({ portifolio }: PortifolioPageProps) {
   const { isDesktop } = useWindowsSize()
 
   if (portifolio === null) {
@@ -36,7 +37,7 @@ export default function Portifolio({ portifolio }: PortifolioPageProps) {
           if (heightImage()) {
             return (
               <img
-                key={index}
+                key={alt}
                 src={`/portifolio${portifolio.href}/${index + 1}.png`}
                 alt={alt}
                 width="100%"
@@ -51,6 +52,10 @@ export default function Portifolio({ portifolio }: PortifolioPageProps) {
     </>
   )
 }
+
+const PortifolioPage = memo(Page, (prevProps, nextProps) => Object.is(prevProps, nextProps))
+
+export default PortifolioPage
 
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: Object.keys(portifolioMap).map((key) => ({

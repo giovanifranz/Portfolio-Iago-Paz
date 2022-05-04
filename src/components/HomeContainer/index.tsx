@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ThemeProvider } from 'styled-components'
@@ -12,7 +13,7 @@ interface Props {
   orientation: 'left' | 'right'
 }
 
-function HomeContainer({ title, description, image, href, orientation }: Props) {
+function HomeContainerComponent({ title, description, image, href, orientation }: Props) {
   const theme = {
     orientation,
   }
@@ -38,5 +39,7 @@ function HomeContainer({ title, description, image, href, orientation }: Props) 
   )
 }
 
-export { HomeContainer }
+export const HomeContainer = memo(HomeContainerComponent, (prevProps, nextProps) =>
+  Object.is(prevProps, nextProps),
+)
 export type { Props as HomeContainerProps }

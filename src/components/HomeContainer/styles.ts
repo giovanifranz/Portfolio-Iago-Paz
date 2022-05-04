@@ -61,12 +61,12 @@ export const Anchor = styled.div`
     height: 560px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     width: 537px;
     height: 336px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     width: auto;
     height: auto;
   }
