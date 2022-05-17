@@ -1,4 +1,4 @@
-# Portifólio - Designer Iago Centenaro Paz
+# Portfólio - Designer Iago Centenaro Paz
 
 ## Instalação
 
