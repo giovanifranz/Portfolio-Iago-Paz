@@ -40,6 +40,7 @@ function Page({ portifolio }: PortifolioPageProps) {
                 key={alt}
                 src={`/portifolio${portifolio.href}/${index + 1}.png`}
                 alt={alt}
+                loading="lazy"
                 width="100%"
                 height="100%"
               />

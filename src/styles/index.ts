@@ -49,6 +49,7 @@ export const Container = styled.main`
   margin: 0 auto;
   margin-top: 220px;
   margin-bottom: 25px;
+  display: block;
 
   @media (max-width: 768px) {
     max-width: 768px;

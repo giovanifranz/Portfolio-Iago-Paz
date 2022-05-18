@@ -30,7 +30,7 @@ function HomeContainerComponent({ title, description, image, href, orientation }
         <Banner>
           <Link href={href} passHref>
             <Anchor>
-              <Image src={image} alt={title} layout="fill" />
+              <Image src={image} alt={title} layout="fill" loading="lazy" />
             </Anchor>
           </Link>
         </Banner>
